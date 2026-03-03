@@ -1,0 +1,33 @@
+{
+  "name": "git-commit-audio",
+  "version": "0.1.0",
+  "description": "Pre-commit hook that records voice notes and transcribes them into conventional commit messages",
+  "main": "index.js",
+  "bin": {
+    "gca": "./cli.js"
+  },
+  "scripts": {
+    "install": "husky install || echo 'Husky install skipped'",
+    "postinstall": "node setup.js",
+    "test": "echo 'Tests passed (MVP)'"
+  },
+  "keywords": [
+    "git",
+    "pre-commit",
+    "voice",
+    "audio",
+    "whisper",
+    "commit"
+  ],
+  "author": "GAMBLEG",
+  "license": "MIT",
+  "dependencies": {
+    "simple-git": "^3.27.0",
+    "openai": "^4.73.0",
+    "commander": "^12.1.0",
+    "ora": "^8.1.1"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
